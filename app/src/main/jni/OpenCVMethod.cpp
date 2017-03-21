@@ -27,6 +27,8 @@ JNIEXPORT jintArray JNICALL Java_com_willhua_opencvstudy_OpenCVMethod_gray(
 
     Mat imgData(h, w, CV_8UC4, (unsigned char *) cbuf);
 
+    cvLine(imgData, CvPoint(0,0), CvPoint(1000,1000),CV_RGB(255,0,0),10);
+
     uchar* ptr = imgData.ptr(0);
     for(int i = 0; i < w*h; i ++){
         //计算公式：Y(亮度) = 0.299*R + 0.587*G + 0.114*B

@@ -3,8 +3,11 @@
 //
 
 #include <jni.h>
+#include <android/log.h>
 #ifndef OPENCVSTUDY_OPENCVMETHOD_H
 #define OPENCVSTUDY_OPENCVMETHOD_H
+
+#define LOG(...) __android_log_print(ANDROID_LOG_DEBUG, "lyhopencvn", __VA_ARGS__)
 
 #ifdef __cplusplus
 extern "C" {
